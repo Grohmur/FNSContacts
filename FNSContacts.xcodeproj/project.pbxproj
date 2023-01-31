@@ -13,6 +13,7 @@
 		3133A294295C500A0096D674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3133A292295C500A0096D674 /* Main.storyboard */; };
 		3133A296295C500A0096D674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3133A295295C500A0096D674 /* Assets.xcassets */; };
 		3133A299295C500A0096D674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3133A297295C500A0096D674 /* LaunchScreen.storyboard */; };
+		3133A2A1295C50FA0096D674 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133A2A0295C50FA0096D674 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3133A295295C500A0096D674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3133A298295C500A0096D674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3133A29A295C500A0096D674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3133A2A0295C50FA0096D674 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3133A292295C500A0096D674 /* Main.storyboard */,
 				3133A295295C500A0096D674 /* Assets.xcassets */,
 				3133A297295C500A0096D674 /* LaunchScreen.storyboard */,
+				3133A2A0295C50FA0096D674 /* Data.swift */,
 				3133A29A295C500A0096D674 /* Info.plist */,
 			);
 			path = FNSContacts;
@@ -140,6 +143,7 @@
 			files = (
 				3133A291295C500A0096D674 /* ViewController.swift in Sources */,
 				3133A28D295C500A0096D674 /* AppDelegate.swift in Sources */,
+				3133A2A1295C50FA0096D674 /* Data.swift in Sources */,
 				3133A28F295C500A0096D674 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
