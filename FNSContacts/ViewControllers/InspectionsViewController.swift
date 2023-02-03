@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactListViewController: UITableViewController {
+class InspectionsViewController: UITableViewController {
     let inspectionsList = generateInspections()
 
     override func viewDidLoad() {

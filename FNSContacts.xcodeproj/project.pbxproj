@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		311D5C3B298A67A800BD885E /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D5C3A298A67A800BD885E /* ContactListViewController.swift */; };
+		311D5C3B298A67A800BD885E /* InspectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D5C3A298A67A800BD885E /* InspectionsViewController.swift */; };
 		311D5C3F298A7C5500BD885E /* DepartmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D5C3E298A7C5500BD885E /* DepartmentsViewController.swift */; };
 		311D5C47298A937300BD885E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D5C46298A937300BD885E /* ContactsViewController.swift */; };
 		311D5C49298A96AF00BD885E /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311D5C48298A96AF00BD885E /* ContactDetailViewController.swift */; };
@@ -20,10 +20,11 @@
 		3133A2A1295C50FA0096D674 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3133A2A0295C50FA0096D674 /* Data.swift */; };
 		3147A36C298CFC020033DF3C /* InspectionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3147A36B298CFC020033DF3C /* InspectionInfoViewController.swift */; };
 		314EFC4F298BBD1600935EAE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314EFC4E298BBD1600935EAE /* SearchViewController.swift */; };
+		31AE00D4298D2B8400BF4140 /* DepartmentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE00D3298D2B8400BF4140 /* DepartmentInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		311D5C3A298A67A800BD885E /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		311D5C3A298A67A800BD885E /* InspectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionsViewController.swift; sourceTree = "<group>"; };
 		311D5C3E298A7C5500BD885E /* DepartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsViewController.swift; sourceTree = "<group>"; };
 		311D5C46298A937300BD885E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		311D5C48298A96AF00BD885E /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		3133A2A0295C50FA0096D674 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3147A36B298CFC020033DF3C /* InspectionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionInfoViewController.swift; sourceTree = "<group>"; };
 		314EFC4E298BBD1600935EAE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		31AE00D3298D2B8400BF4140 /* DepartmentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 			children = (
 				3133A290295C500A0096D674 /* ViewController.swift */,
 				314EFC4E298BBD1600935EAE /* SearchViewController.swift */,
-				311D5C3A298A67A800BD885E /* ContactListViewController.swift */,
+				311D5C3A298A67A800BD885E /* InspectionsViewController.swift */,
 				311D5C3E298A7C5500BD885E /* DepartmentsViewController.swift */,
 				3147A36B298CFC020033DF3C /* InspectionInfoViewController.swift */,
 				311D5C46298A937300BD885E /* ContactsViewController.swift */,
+				31AE00D3298D2B8400BF4140 /* DepartmentInfoViewController.swift */,
 				311D5C48298A96AF00BD885E /* ContactDetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -197,8 +200,9 @@
 				3133A28D295C500A0096D674 /* AppDelegate.swift in Sources */,
 				314EFC4F298BBD1600935EAE /* SearchViewController.swift in Sources */,
 				3133A2A1295C50FA0096D674 /* Data.swift in Sources */,
-				311D5C3B298A67A800BD885E /* ContactListViewController.swift in Sources */,
+				311D5C3B298A67A800BD885E /* InspectionsViewController.swift in Sources */,
 				311D5C3F298A7C5500BD885E /* DepartmentsViewController.swift in Sources */,
+				31AE00D4298D2B8400BF4140 /* DepartmentInfoViewController.swift in Sources */,
 				311D5C49298A96AF00BD885E /* ContactDetailViewController.swift in Sources */,
 				3133A28F295C500A0096D674 /* SceneDelegate.swift in Sources */,
 			);

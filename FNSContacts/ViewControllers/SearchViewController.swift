@@ -102,6 +102,7 @@ class SearchViewController: UITableViewController {
                 let inspection = filteredInspections[indexPath.row]
                 let departmentsVK = segue.destination as! DepartmentsViewController
                 departmentsVK.departmentsList = fillInspection(leaderInsp: inspection.leader, inspection: inspection.inspName)
+                departmentsVK.insp = inspection
             }
         } else {
             if indexPath.row >= inspections.count {
@@ -112,6 +113,7 @@ class SearchViewController: UITableViewController {
                 let inspection = inspections[indexPath.row]
                 let departmentsVK = segue.destination as! DepartmentsViewController
                 departmentsVK.departmentsList = fillInspection(leaderInsp: inspection.leader, inspection: inspection.inspName)
+                departmentsVK.insp = inspection
             }
         }
     }

@@ -16,7 +16,7 @@ class InspectionInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         inspName.text = insp.inspName
-        inspAdr.text = insp.inspAdress
+        inspAdr.text = "Адрес: \(insp.inspAdress)"
         // Do any additional setup after loading the view.
     }
     

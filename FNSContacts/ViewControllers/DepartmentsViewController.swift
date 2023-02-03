@@ -21,21 +21,22 @@ class DepartmentsViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    @IBAction func InfoButtonPressed(_ sender: Any) {
+
+    @IBAction func infoButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "toInspInfo", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCOntactList" {
+        if segue.destination is ContactsViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let contactList = departmentsList[indexPath.row].type == DepartmentType.leaderInsp ? generateInspLeaders(leaderInsp: departmentsList[indexPath.row].leader, inspection: departmentsList[indexPath.row].inspection) : fillDepartment(department: departmentsList[indexPath.row].type, leaderName: departmentsList[indexPath.row].leader)
         let contactsVC = segue.destination as! ContactsViewController
         contactsVC.contactList = contactList
+            contactsVC.currentDepartment = departmentsList[indexPath.row]
         }
-        if segue.identifier == "toInspInfo" {
-        let insp = insp
-        let inspDetailVK = segue.destination as! InspectionInfoViewController
-        inspDetailVK.insp = insp
+        if segue.destination is InspectionInfoViewController {
+            let inspDetailVK = segue.destination as! InspectionInfoViewController
+            inspDetailVK.insp = insp
         }
     }
 
@@ -58,7 +59,5 @@ class DepartmentsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            performSegue(withIdentifier: "toCOntactList", sender: nil)
-
-        
     }
 }

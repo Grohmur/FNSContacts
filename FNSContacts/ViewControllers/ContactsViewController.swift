@@ -10,6 +10,7 @@ import UIKit
 class ContactsViewController: UITableViewController {
     
     var contactList: [Contact]!
+    var currentDepartment: Depatrment!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,10 @@ class ContactsViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toDepartmentInfo", sender: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contactList.count
     }
@@ -37,9 +41,16 @@ class ContactsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let contact = contactList[indexPath.row]
-        let contactdetailVC = segue.destination as! ContactDetailViewController
-        contactdetailVC.contact = contact
+        if segue.destination is ContactDetailViewController{
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let contact = contactList[indexPath.row]
+            let contactdetailVC = segue.destination as! ContactDetailViewController
+            contactdetailVC.contact = contact
+        }
+        if segue.destination is DepartmentInfoViewController{
+            let departmentDetailVC = segue.destination as! DepartmentInfoViewController
+            departmentDetailVC.currentDepartment = currentDepartment
+        }
+
     }
 }
