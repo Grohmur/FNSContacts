@@ -42,6 +42,7 @@ struct Contact {
     let dateBirth: String
     let jobTitle: String
     let phone: String
+    let photo: String
 }
 
 struct Depatrment {
@@ -599,6 +600,14 @@ func generateDepartmentFunctionsArray (departmentType: DepartmentType) -> [Strin
     return functions
 }
 
+func generatePhoto(gender: Gender) -> String {
+    if gender == Gender.male {
+        return "male\(Int.random(in: 0...9))"
+    } else {
+        return "female\(Int.random(in: 0...9))"
+    }
+}
+
 func generateInspLeaders(leaderInsp: String, inspection: String) -> [Contact] {
     var leaders: [Contact] = []
     leaders.append(Contact(name: leaderInsp,
@@ -607,28 +616,32 @@ func generateInspLeaders(leaderInsp: String, inspection: String) -> [Contact] {
                            functions: generateContactFunctions(department: .leaderInsp),
                            dateBirth: generateDate(),
                            jobTitle: "Начальник",
-                           phone: generateNumber()))
+                           phone: generateNumber(),
+                           photo: generatePhoto(gender: .female)))
     leaders.append(Contact(name: generateName(gender: .female),
                            department: .leaderInsp,
                            gender: .female,
                            functions: generateContactFunctions(department: .leaderInsp),
                            dateBirth: generateDate(),
                            jobTitle: "Заместитель начальника",
-                           phone: generateNumber()))
+                           phone: generateNumber(),
+                           photo: generatePhoto(gender: .female)))
     leaders.append(Contact(name: generateName(gender: .male),
                            department: .leaderInsp,
                            gender: .male,
                            functions: generateContactFunctions(department: .leaderInsp),
                            dateBirth: generateDate(),
                            jobTitle: "Заместитель начальника",
-                           phone: generateNumber()))
+                           phone: generateNumber(),
+                           photo: generatePhoto(gender: .male)))
     leaders.append(Contact(name: generateName(gender: .female),
                            department: .leaderInsp,
                            gender: .female,
                            functions: generateContactFunctions(department: .leaderInsp),
                            dateBirth: generateDate(),
                            jobTitle: "Заместитель начальника",
-                           phone: generateNumber()))
+                           phone: generateNumber(),
+                           photo: generatePhoto(gender: .female)))
     return leaders
 }
 
@@ -640,14 +653,16 @@ func fillDepartment(department: DepartmentType, leaderName: String) -> [Contact]
                             functions: "Руководство текущей деятельностью отдела",
                             dateBirth: generateDate(),
                             jobTitle: "Начальник отдела",
-                            phone: generateNumber()))
+                            phone: generateNumber(),
+                            photo: generatePhoto(gender: .male)))
     contacts.append(Contact(name: generateName(gender: .female),
                             department: department,
                             gender: .female,
                             functions: "Руководство текущей деятельностью отдела",
                             dateBirth: generateDate(),
                             jobTitle: "Заместитель начальника отдела",
-                            phone: generateNumber()))
+                            phone: generateNumber(),
+                            photo: generatePhoto(gender: .female)))
     for _ in 3...12 {
         let randomNumber = Int.random(in: 1...2)
         let currentGender = randomNumber == 1 ? Gender.male : Gender.female
@@ -658,7 +673,8 @@ func fillDepartment(department: DepartmentType, leaderName: String) -> [Contact]
                                 functions: generateContactFunctions(department: department),
                                 dateBirth: generateDate(),
                                 jobTitle: titles[Int.random(in: 0...titles.count-1)],
-                                phone: generateNumber()))
+                                phone: generateNumber(), photo:
+                                    generatePhoto(gender: currentGender)))
     }
     return contacts
 }
@@ -1151,7 +1167,8 @@ func generateRandomContact() -> Contact {
                           functions: generateContactFunctions(department: randomdeoartment),
                           dateBirth: generateDate(),
                           jobTitle: titles.randomElement()!,
-                          phone: generateNumber())
+                          phone: generateNumber(),
+                          photo: generatePhoto(gender: gender))
     return contact
 }
 

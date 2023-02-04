@@ -21,7 +21,7 @@ class ContactDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactPhoto.image = UIImage(named: contact.gender == Gender.male ? "male" : "female")
+        contactPhoto.image = UIImage(named: contact.photo)
         name.text = contact.name
         jobTitle.text = contact.jobTitle
         number.text = contact.phone
