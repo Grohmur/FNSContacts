@@ -160,61 +160,7 @@ func generateNumber() -> String{
     "\(Int.random(in: 10...99))-\(Int.random(in: 10...99))"
 }
 
-func generateInspections() -> [Inspection] {
-    var inspections: [Inspection] = []
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7801 - Межрайонная ИФНС России  № 16 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Большой пр. В.О., дом 55Б" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7802 - Межрайонная ИФНС России  № 17 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Пархоменко пр., дом 13" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7804 - Межрайонная ИФНС России  № 18 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Арсенальная наб, дом 13/1" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7805 - Межрайонная ИФНС России  № 19 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Трамвайный пр., дом 23, к. 1" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7806 - Межрайонная ИФНС России  № 21 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Пороховская ул., д. 12/34" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7807 - Межрайонная ИФНС России  № 22 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Партизана Германа ул., дом 37" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7810 - Межрайонная ИФНС России  № 23 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Пулковская ул., дом 12" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7811 - Межрайонная ИФНС России  № 24 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Дальневосточный пр., дом 78" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7813 - Межрайонная ИФНС России  № 25 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Ленина ул., дом 11/64" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7814 - Межрайонная ИФНС России  № 26 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Савушкина ул., дом 71" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7816 - Межрайонная ИФНС России  № 27 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Салова ул., дом 65" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7817 - Межрайонная ИФНС России  № 20 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Советский б-р, дом 5" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7838 - Межрайонная ИФНС России  № 7 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Канала Грибоедова наб., дом 133" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7840 - Межрайонная ИФНС России  № 9 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Потемкинская ул., дом 2" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7842 - Межрайонная ИФНС России  № 11 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Чайковского ул., дом 46/48" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7843 - Межрайонная ИФНС России  № 12 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Борисова ул., дом 6" ))
-    inspections.append(Inspection(leader: generateName(gender: .female),
-                                  inspName: "7847 - Межрайонная ИФНС России  № 15 по Санкт-Петербургу",
-                                  inspAdress: "Санкт-Петербург, Красного текстильщика ул., 10-12" ))
-    return inspections
-}
+
 
 func departmentName(departmentType: DepartmentType) -> String {
     var name = ""
@@ -259,80 +205,6 @@ func departmentName(departmentType: DepartmentType) -> String {
     return name
 }
 
-//func generateDepartmentFunctions(departmentType: DepartmentType) -> [String] {
-//    switch departmentType {
-//    case .leaderInsp:
-//        return ["Руководство текущей деятельностью инспекции"]
-//    case .obshiy:
-//        return ["Прием, регистрация и отправка входящей и исходящей корреспонденции",
-//                "Прием документов на хранение, ведение архива",
-//                "Ретросканирование, ответы на запросы сторонних организаций"]
-//    case .hoz:
-//        return ["Материально-техническое обеспечение",
-//                "Заключение договоров(тепловая и электрическая энергия)",
-//                "Обеспечение автотранспортом, обслуживание служебных помещений"]
-//    case .finansy:
-//        return ["Исполнение сметы расходов на содержание инспекции",
-//                "Санкционирование расходов бюджета",
-//                "Взаимодействие с ФКУ ЦОКР по передаче централизуемых полномочий"]
-//    case .kadry:
-//        return ["Прием, перевод, увольнение, отпуска, отпуска по уходу за ребенком",
-//                "Проф. развитие, аттестация, квал. экзамены",
-//                "Собственная безопасность, воинский учет, гражданская оборона"]
-//    case .pravovoy:
-//        return ["Обеспечение правовой экспертизы",
-//                "Представление защиты законных интересов инспекции",
-//                "Подготовка заключений на действия(бездействия) должностных лиц"]
-//    case .it:
-//        return ["Администрирование и резервное копирование баз данных инспекции",
-//                "Обучение и консультирование пользователей прикладных программ",
-//                "Исполнение функций оператора удостоверяющего центра"]
-//    case .analiza:
-//        return ["Контроль за выполнением доведенных индикативных показателей",
-//                "Анализ базы налогооблажения, начислений, поступлений",
-//                "Мониторинг и прогнозирование поступлений налоговых платежей"]
-//    case .registracyy:
-//        return ["Учет налогоплательщиков",
-//                "Государственная регистрация ЮЛ и ИП",
-//                "Представление сведений из ЕГРН, РДЛ"]
-//    case .rabotySNalogoplat:
-//        return ["Информирование налогоплательщиков о действующем законодательстве",
-//                "Выдача электронных подписей",
-//                "Прием и регистрация документов"]
-//    case .kameralniy1:
-//    return ["Камеральные проверки по НДС",
-//            "Камеральные проверки по косвенным налогам",
-//            "Контроль расхождений"]
-//    case .kameralniy2:
-//        return ["Камеральные проверки в отношении налога на прибыль",
-//                "Камеральные проверки в отношении налога на имущество организаций",
-//                "Камеральные проверки в отношении налога на добычу полезных ископаемых"]
-//    case .kameralniy3:
-//        return ["Камеральные проверки по НДФЛ",
-//                "Проверки по расчетам от продажи и дарения",
-//                "Представление налоговых вычетов в упрощенном порядке"]
-//    case .kameralniy4:
-//        return ["Исчисление имущественных налогов ФЛ",
-//                "Исчисление налога на имущество",
-//                "Исчисление земельного налога"]
-//    case .kameralniy5:
-//        return ["Камеральные проверки расчетов для исчисления и уплаты налогов и взносов",
-//                "Работа с налогоплательщиками по легализации налогооблагаемой базы",
-//                "Анализ схем уклонения от налогооблажения"]
-//    case .kameralniy6:
-//        return ["Камеральные проверки деклараций по акцизам",
-//                "Соблюдение валютного законодательства",
-//                "Отраслевой проект"]
-//    case .kameralniy7:
-//        return ["Специальные налоговые режимы",
-//                "Налог на профессиональный доход",
-//                "Единый налог, уплачиваемый по патентной системе налогооблажения"]
-//    case .operativnogo:
-//
-//            return ["Контроль и надзор за полнотой учета выручки,
-//                    "Регистрация контрольно-кассовой техники",
-//                    "Надзор за проведение лотерей, азартных игр"]
-//}
 
 func generateDepartmentFunctions (departmentType: DepartmentType) -> [String] {
     var functions: [String] = []
@@ -1159,7 +1031,7 @@ func genereteInspectionSearchList() -> [Inspection] {
 func generateRandomContact() -> Contact {
     let genderNumer = Int.random(in: 1...2)
     let gender = genderNumer == 1 ? Gender.male : Gender.female
-    let departments = [DepartmentType.leaderInsp, DepartmentType.obshiy, DepartmentType.hoz, DepartmentType.finansy, DepartmentType.kadry, DepartmentType.pravovoy, DepartmentType.it, DepartmentType.analiza, DepartmentType.registracyy, DepartmentType.rabotySNalogoplat, DepartmentType.kameralniy7, DepartmentType.kameralniy6, DepartmentType.kameralniy5, DepartmentType.kameralniy4, DepartmentType.kameralniy3, DepartmentType.kameralniy2, DepartmentType.kameralniy1, DepartmentType.operativnogo]
+    let departments = [DepartmentType.obshiy, DepartmentType.hoz, DepartmentType.finansy, DepartmentType.kadry, DepartmentType.pravovoy, DepartmentType.it, DepartmentType.analiza, DepartmentType.registracyy, DepartmentType.rabotySNalogoplat, DepartmentType.kameralniy7, DepartmentType.kameralniy6, DepartmentType.kameralniy5, DepartmentType.kameralniy4, DepartmentType.kameralniy3, DepartmentType.kameralniy2, DepartmentType.kameralniy1, DepartmentType.operativnogo]
     let randomdeoartment = departments.randomElement()!
     let contact = Contact(name: generateName(gender: gender),
                           department: randomdeoartment,
@@ -1180,7 +1052,237 @@ func generateContactsSearchList() -> [Contact] {
     return contactList
 }
 
+func generateRegions() -> [String] {
+    return ["Санкт-Петербург","Ленинградская область","Владимирская область","Вологодская область","Липецкая область","Новосибирская область","Ростовская область","Самарская область","Тверская область","Тульская область","Рязанская область","Камчатский край","Красноярский край","Ставропольский край","Республика ингушетия"]
+}
 
+func generateInspections(region: String) -> [Inspection] {
+    var inspections: [Inspection] = []
+//    if region == "Санкт-Петербург" {
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7801 - Межрайонная ИФНС России  № 16 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Большой пр. В.О., дом 55Б" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7802 - Межрайонная ИФНС России  № 17 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Пархоменко пр., дом 13" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7804 - Межрайонная ИФНС России  № 18 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Арсенальная наб, дом 13/1" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7805 - Межрайонная ИФНС России  № 19 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Трамвайный пр., дом 23, к. 1" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7806 - Межрайонная ИФНС России  № 21 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Пороховская ул., д. 12/34" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7807 - Межрайонная ИФНС России  № 22 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Партизана Германа ул., дом 37" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7810 - Межрайонная ИФНС России  № 23 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Пулковская ул., дом 12" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7811 - Межрайонная ИФНС России  № 24 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Дальневосточный пр., дом 78" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7813 - Межрайонная ИФНС России  № 25 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Ленина ул., дом 11/64" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7814 - Межрайонная ИФНС России  № 26 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Савушкина ул., дом 71" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7816 - Межрайонная ИФНС России  № 27 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Салова ул., дом 65" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7817 - Межрайонная ИФНС России  № 20 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Советский б-р, дом 5" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7838 - Межрайонная ИФНС России  № 7 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Канала Грибоедова наб., дом 133" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7840 - Межрайонная ИФНС России  № 9 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Потемкинская ул., дом 2" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7842 - Межрайонная ИФНС России  № 11 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Чайковского ул., дом 46/48" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7843 - Межрайонная ИФНС России  № 12 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Борисова ул., дом 6" ))
+        inspections.append(Inspection(leader: generateName(gender: .female),
+                                      inspName: "7847 - Межрайонная ИФНС России  № 15 по Санкт-Петербургу",
+                                      inspAdress: "Санкт-Петербург, Красного текстильщика ул., 10-12" ))
+//    }
+//    if region == "Ленинградская область" {
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4702 - Межрайонная ИФНС России № 5 по Ленинградской области",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4703 - Межрайонная ИФНС России по Всеволожскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4704 - Межрайонная ИФНС России по Выборгскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4705 - Межрайонная ИФНС России № 7 по Ленинградской области",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4706 - Межрайонная ИФНС России № 2 по Ленинградской области",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4707 - Межрайонная ИФНС России № 3 по Ленинградской области",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4708 - Межрайонная ИФНС России по Киришскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4710 - Межрайонная ИФНС России по Лужскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4711 - Межрайонная ИФНС России № 4 по Ленинградской области",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4712 - Межрайонная ИФНС России по Приозерскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4713 - Межрайонная ИФНС России по Сланцевому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4714 - Межрайонная ИФНС России по г. Сосновый бор ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4715 - Межрайонная ИФНС России № 6 по Ленинградской области",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4716 - Межрайонная ИФНС России по Тосненскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4717 - Межрайонная ИФНС России по Волосовскому району ЛО",
+//                                      inspAdress: "Ленинградская область" ))
+//    }
+//    if region == "Владимирская область" {
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3304 - Межрайонная ИФНС России № 1 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3316 - Межрайонная ИФНС России № 11 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3326 - Межрайонная ИФНС России № 3 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3327 - Межрайонная ИФНС России по Ленинскому району г. Владимира",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3328 - Межрайонная ИФНС России по Октябрьскому району г. Владимира",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3332 - Межрайонная ИФНС России № 2 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3334 - Межрайонная ИФНС России № 4 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3335 - Межрайонная ИФНС России № 5 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3336 - Межрайонная ИФНС России № 6 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3337 - Межрайонная ИФНС России № 7 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3338 - Межрайонная ИФНС России № 8 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3339 - Межрайонная ИФНС России № 9 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3340 - Межрайонная ИФНС России № 10 по Владимирской области",
+//                                      inspAdress: "Владимирская область" ))
+//    }
+//    if region == "Вологодская область" {
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3435 - Межрайонная ИФНС России по г. Воложскому Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3443 - Межрайонная ИФНС России по Дзержинскому району Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3444 - Межрайонная ИФНС России по Центральному району Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3451 - Межрайонная ИФНС России № 1 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3452 - Межрайонная ИФНС России № 2 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3453 - Межрайонная ИФНС России № 3 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3454 - Межрайонная ИФНС России № 4 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3455 - Межрайонная ИФНС России № 5 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3456 - Межрайонная ИФНС России № 6 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3457 - Межрайонная ИФНС России № 7 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3458 - Межрайонная ИФНС России № 8 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3459 - Межрайонная ИФНС России № 9 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3460 - Межрайонная ИФНС России № 10 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "3461 - Межрайонная ИФНС России № 11 по Вологодской области",
+//                                      inspAdress: "Вологодская область" ))
+//    }
+//    if region == "Липецкая область" {
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4802 - Межрайонная ИФНС России № 1 по Липецкой области",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4807 - Межрайонная ИФНС России № 2 по Липецкой области",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4811 - Межрайонная ИФНС России № 4 по Липецкой области",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4813 - Межрайонная ИФНС России № 5 по Липецкой области",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4816 - Межрайонная ИФНС России № 3 по Липецкой области",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4821 - Межрайонная ИФНС России по г. Ельцу Липецкой области",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4822 - Межрайонная ИФНС России по Центральному району г. Липецка",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4823 - Межрайонная ИФНС России по Левобережному району г. Липецка",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4824 - Межрайонная ИФНС России по Октябрьскому району г. Липецка",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4825 - Межрайонная ИФНС России по Правобережному району г. Липецка",
+//                                      inspAdress: "Липецкая область" ))
+//        inspections.append(Inspection(leader: generateName(gender: .female),
+//                                      inspName: "4826 - Межрайонная ИФНС России по Советскому району г. Липецка",
+//                                      inspAdress: "Липецкая область" ))
+//    }
+//    
+//    
+//    
+return inspections
+}
 
 
 

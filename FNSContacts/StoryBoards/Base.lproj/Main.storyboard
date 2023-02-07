@@ -64,7 +64,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="yY7-Vp-xnO" kind="show" id="o0a-0v-UYQ"/>
+                                    <action selector="enterButtonPressed:" destination="PSs-Jd-6ih" eventType="touchUpInside" id="YYF-tv-Qhe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Информационно-справочная система налоговых органов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w1-qD-Fnn">
@@ -82,6 +82,9 @@
                         <viewLayoutGuide key="safeArea" id="220-sN-iIl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <segue destination="yY7-Vp-xnO" kind="show" identifier="toInspections" id="4nU-sM-HnW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyu-46-jgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,10 +108,39 @@
             </objects>
             <point key="canvasLocation" x="-2464" y="192"/>
         </scene>
+        <!--Regions Table View Controller-->
+        <scene sceneID="gZ5-iy-jH2">
+            <objects>
+                <tableViewController id="sAi-ig-zIx" customClass="RegionsTableViewController" customModule="FNSContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wLn-Dj-SxS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="regionsCell" id="KZi-pq-D5E">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZi-pq-D5E" id="3jw-O9-CFu">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sAi-ig-zIx" id="DuA-MS-nqO"/>
+                            <outlet property="delegate" destination="sAi-ig-zIx" id="S4F-Fq-EfE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qc9-zz-Id9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8z-xu-5cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="-789"/>
+        </scene>
         <!--Санкт-Петербург-->
         <scene sceneID="E7l-a6-qd7">
             <objects>
-                <tableViewController id="0sM-R4-La7" customClass="InspectionsViewController" customModule="FNSContacts" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="InspectionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0sM-R4-La7" customClass="InspectionsViewController" customModule="FNSContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="B2h-vb-Bx6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +187,22 @@
                             <outlet property="delegate" destination="0sM-R4-La7" id="dxc-yK-Ktf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Санкт-Петербург" id="YkJ-Hr-DGi"/>
+                    <navigationItem key="navigationItem" title="Санкт-Петербург" id="YkJ-Hr-DGi">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="FVv-GK-dOX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="AqN-Br-xCd">
+                                <rect key="frame" x="288" y="11" width="86" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                                <connections>
+                                    <action selector="regionsButtonPressed:" destination="0sM-R4-La7" eventType="touchUpInside" id="a2s-a5-3rI"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="sAi-ig-zIx" kind="show" identifier="toRegions" id="HJ4-T4-vKA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0z-G7-r38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,9 +507,7 @@
         <scene sceneID="Tif-4s-ArV">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="Pur-mJ-Dgj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="RIo-6f-WRO">
-                        <color key="badgeColor" systemColor="systemGray5Color"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="RIo-6f-WRO"/>
                     <navigationItem key="navigationItem" id="cWa-FU-FeF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BWy-F4-TIf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
@@ -529,12 +574,13 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KTu-8N-krf"/>
-        <segue reference="VDB-gb-BHJ"/>
+        <segue reference="QVC-WH-6qS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="building.2.crop.circle" catalog="system" width="128" height="121"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="fnslabel" width="425" height="447"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="inspmap" width="860" height="669"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
@@ -549,9 +595,6 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

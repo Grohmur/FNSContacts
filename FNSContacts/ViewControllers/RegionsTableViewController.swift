@@ -1,69 +1,44 @@
 //
-//  TableViewController.swift
+//  RegionsTableViewController.swift
 //  FNSContacts
 //
-//  Created by Михаил Зверьков on 01.02.2023.
+//  Created by Михаил Зверьков on 06.02.2023.
 //
 
 import UIKit
 
-class InspectionsViewController: UITableViewController {
-
-    var inspectionsList: [Inspection]!
+class RegionsTableViewController: UITableViewController {
     
+    var regions: [String]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        regions = regions.sorted(by: { $0 < $1 })
+    }
 
-    }
-    
-    @IBAction func regionsButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toRegions", sender: nil)
-    }
-    
+    // MARK: - Table view data source
+
+
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return inspectionsList.count
+        return regions.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "inspCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "regionsCell", for: indexPath)
 
-        let inspection = inspectionsList[indexPath.row]
+        let region = regions[indexPath.row]
  
         var content = cell.defaultContentConfiguration()
-        content.image = UIImage(systemName: "building.2.crop.circle")
-        content.text = inspection.inspName
-        content.secondaryText = inspection.leader
+        content.image = UIImage(systemName: "location.magnifyingglass")
+        content.text = region
         cell.contentConfiguration = content
         return cell
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is DepartmentsViewController {
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let departments = fillInspection(leaderInsp: inspectionsList[indexPath.row].leader, inspection: inspectionsList[indexPath.row].inspName)
-            let departmentsVC = segue.destination as! DepartmentsViewController
-            departmentsVC.departmentsList = departments
-            departmentsVC.insp = inspectionsList[indexPath.row]
-        }
-        if segue.destination is RegionsTableViewController {
-            let regionsVK = segue.destination as! RegionsTableViewController
-            regionsVK.regions = generateRegions()
-        }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
-
-    
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        .none
-    }
-    
-    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        false
-    }
-    
-
-    
 
     /*
     // Override to support conditional editing of the table view.
